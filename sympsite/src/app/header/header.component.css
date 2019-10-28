@@ -1,0 +1,14 @@
+.navbar-default {
+    background-color: rgb(245, 240, 240);
+    border-color: #E7E7E7;
+}
+.navbar-default .navbar-brand {
+    color:black;
+}
+
+.navbar-default .navbar-nav >  a {
+    color: black;
+    padding-right: 25px !important;
+    padding-left: 25px !important;
+}
+

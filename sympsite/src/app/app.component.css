@@ -1,0 +1,10 @@
+.bg{
+    background-color:rgb(245 , 240, 240);
+    height: 100vh;
+    color: black;
+    
+}
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    src: url('https://fonts.googleapis.com/css?family=Poppins&display=swap') format("opentype");
+  }
