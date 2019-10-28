@@ -1,14 +1,45 @@
 .navbar-default {
-    background-color: rgb(245, 240, 240);
+    background-color: #ebebeb;
     border-color: #E7E7E7;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
 }
 .navbar-default .navbar-brand {
-    color:black;
+    color: #46484d;
+    font-size: 35px;
+    padding-left: 25px !important;
+    letter-spacing: 2px;
 }
 
 .navbar-default .navbar-nav >  a {
-    color: black;
-    padding-right: 25px !important;
-    padding-left: 25px !important;
+    color: grey;
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+    position: relative;
+    letter-spacing: 2px;
 }
 
+.navbar-default .navbar-nav >  a,
+.navbar-default .navbar-nav >  a:after, 
+.navbar-default .navbar-nav >  a:before{
+    transition: all .5s;
+}
+.navbar-default .navbar-nav > a:hover {
+    color: black;
+  }
+
+.navbar-default .navbar-nav > a:after{
+    position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+
+.navbar-default .navbar-nav > a:hover:after{
+    width: 60%;
+}
