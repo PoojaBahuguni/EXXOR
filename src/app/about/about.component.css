@@ -6,7 +6,8 @@ section {
    
   img{
     position: relative;
-    left: 0%;
+    left: 60px;
+    padding-top: 100px;
     height: 47.5%;
     width: 47.5%;
   }

@@ -1,9 +1,19 @@
-.bg{
-    
+.bg {
     height: 100vh;
-    color: black;
+}
+
+.bg-others {
+    height: 100vh;
+    color: white;
     background-color: white;
 }
+
+.bg-contact {
+    height: 100vh;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
 @font-face {
     font-family: 'Poppins', sans-serif;
     src: url('https://fonts.googleapis.com/css?family=Poppins&display=swap') format("opentype");
