@@ -1,8 +1,8 @@
 .bg{
-    background-color:#ebebeb;
+    
     height: 100vh;
     color: black;
-    
+    background-color: white;
 }
 @font-face {
     font-family: 'Poppins', sans-serif;

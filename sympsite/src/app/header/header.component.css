@@ -1,17 +1,17 @@
 .navbar-default {
-    background-color: #ebebeb;
+    background : inherit;
     border-color: #E7E7E7;
-    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+    
 }
 .navbar-default .navbar-brand {
-    color: #46484d;
-    font-size: 35px;
+    color: rgba(0,0,0,.8);
+    font-size: 25px;
     padding-left: 25px !important;
     letter-spacing: 2px;
 }
 
 .navbar-default .navbar-nav >  a {
-    color: grey;
+    color: rgba(0,0,0,.8);
     padding-right: 20px !important;
     padding-left: 20px !important;
     position: relative;
@@ -24,7 +24,7 @@
     transition: all .5s;
 }
 .navbar-default .navbar-nav > a:hover {
-    color: black;
+    color: rgba(0,0,0,.8);
   }
 
 .navbar-default .navbar-nav > a:after{
@@ -42,4 +42,9 @@
 
 .navbar-default .navbar-nav > a:hover:after{
     width: 60%;
+}
+
+.fuck{
+    height: 70px;
+    width: 70px;
 }

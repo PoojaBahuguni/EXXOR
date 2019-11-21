@@ -1,5 +1,4 @@
-<div class="bg">
+<div class="bg" [@scrollAnimation]="getState(o)">
     <app-header></app-header>
-    <app-body></app-body>
-    <app-footer></app-footer>
+    <router-outlet #o="outlet"></router-outlet>
 </div>
