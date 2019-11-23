@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+$color-bg: #f8f8f8;
+$card-padding: 20px;
+$grid-gutter: 31px;
+
+// Media Queries breakpoints
+$small: 480px;
+$medium: 768px;
+$large: 992px;
+$x-large: 1200px;
+
+body {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: $color-bg;
+}
+
+hr{
+  align-self: center;
+  width:50%
+}
+
+h2, p{
+  color: rgb(0,0,0,.8);
+  font : normal 300 32px/1 'Josefin Sans', sans-serif;
+}
+
+p{
+  font-size: 22px;
+  padding: 20px;
+}
+
+h2{
+  padding-top: 15px;
+}
+
+.grid {
+  position: absolute;
+    left:18%;
+    top: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 340px;
+  margin: 0 auto;
+
+  @media screen and (min-width: $medium) {
+    max-width: 1200px;
+  }
+}
+
+.card {
+  position: relative;
+  flex: 1 1 100%;
+  margin: $grid-gutter 0;
+  padding: $card-padding;
+  background: lighten($color-bg, 3%);
+  border-radius: 20px;
+
+  @media screen and (min-width: $medium) {
+    flex-basis: calc(33.33% - (#{$grid-gutter * 2} + #{$card-padding * 2}));
+    margin: 0 $grid-gutter;
+  }
+}
+
+.card__one {
+
+  transition: transform .5s;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 2s cubic-bezier(.165, .84, .44, 1);
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .15);
+    content: '';
+    opacity: 0;
+    z-index: -1;
+    border-radius: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale3d(1.006, 1.006, 1);
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.btn-details{
+  
+  padding: 10px;
+  background-color: rgba(0,0,0,.8);
+  border: transparent;
+  color: #fff;
+  font: normal 300 32px/1 'Josefin Sans', sans-serif;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.btn-compare{
+  position: absolute;
+  left: 850px;
+  top: 820px;
+  background: transparent;
+  color: rgba(0,0,0,.8);
+  padding: 10px;
+  font: normal 300 32px/1 'Josefin Sans', sans-serif;
+  border-bottom: 0.15px solid rgb(232, 229,229);
+  border-left: none;
+  border-right: none;
+  border-top: none;
+}
+

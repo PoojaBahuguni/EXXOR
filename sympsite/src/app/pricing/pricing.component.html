@@ -1,20 +1,18 @@
-<div class="container">
-    <div class="card-deck">
-            <div class="card ">
-              <div class="card-body text-center">
-                <p class="card-text">Basic</p>
-              </div>
-            </div>
-            <div class="card ">
-              <div class="card-body text-center">
-                <p class="card-text">Professional</p>
-              </div>
-            </div>
-            <div class="card ">
-              <div class="card-body text-center">
-                <p class="card-text">Premium</p>
-              </div>
-            </div>
-            
+<div class="container" [@pricingAnimation]="planArray.length">
+  <div class="grid">
+    <div class="card card__one text-center" *ngFor="let plan of planArray">
+      <h2 class="card-text">{{plan.plan}}</h2>
+      <hr>
+      <p>{{plan.description}}</p>
+      <p>Starting at</p>
+      <p class="card-text"><i class="fa fa-inr"></i>{{plan.cost}}</p>
+      <p>inclusive of all taxes</p>
+      <button class="btn-details">DETAILS</button>
     </div>
+  </div>
 </div>
+
+<button class="btn-compare" @slideButton>COMPARE</button>
+
+
+

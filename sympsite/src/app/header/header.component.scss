@@ -10,8 +10,30 @@
     letter-spacing: 2px;
 }
 
+.navbar-contact {
+    background : inherit;
+    border-color: #E7E7E7;
+}
+
+
+
 .navbar-default .navbar-nav >  a {
     color: rgba(0,0,0,.8);
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+.navbar-contact .navbar-brand {
+    color: white;
+    font-size: 25px;
+    padding-left: 25px !important;
+    letter-spacing: 2px;
+}
+
+.navbar-contact .navbar-nav >  a {
+    color:white;
     padding-right: 20px !important;
     padding-left: 20px !important;
     position: relative;
