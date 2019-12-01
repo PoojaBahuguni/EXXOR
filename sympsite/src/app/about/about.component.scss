@@ -1,7 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+
 img{
   position: absolute;
   left: -10%;
   top: 20%;
   height: 70%;
   width: 70%;
+}
+
+p{
+  color: #fff;
+  font : normal 300 24px/1 'Josefin Sans', sans-serif;
+  line-height: 40px;
+  text-align: justify;
+  padding: 40px;
+}
+
+#content-line-1{
+  position: absolute;
+  left: 50%;
+  top: 45%;
 }

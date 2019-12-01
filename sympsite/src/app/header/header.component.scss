@@ -1,13 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+
 .navbar-default {
     background : inherit;
     border-color: #E7E7E7;
     
 }
 .navbar-default .navbar-brand {
-    color: rgba(0,0,0,.8);
+    color:#fff;
     font-size: 25px;
     padding-left: 25px !important;
-    letter-spacing: 2px;
+    font : normal 300 30px/1 'Josefin Sans', sans-serif;
 }
 
 .navbar-contact {
@@ -18,7 +20,7 @@
 
 
 .navbar-default .navbar-nav >  a {
-    color: rgba(0,0,0,.8);
+    color:#fff;
     padding-right: 20px !important;
     padding-left: 20px !important;
     position: relative;
@@ -46,7 +48,7 @@
     transition: all .5s;
 }
 .navbar-default .navbar-nav > a:hover {
-    color: rgba(0,0,0,.8);
+    color:#fff;
   }
 
 .navbar-default .navbar-nav > a:after{
