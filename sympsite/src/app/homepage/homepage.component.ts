@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { rowsAnimation } from '../app.animations';
+import { treesAnimation, baseAnimation, screenAnimation } from '../app.animations';
 
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.scss'],
-  animations: [rowsAnimation],
+  animations: [treesAnimation, baseAnimation, screenAnimation],
 })
 export class HomepageComponent implements OnInit {
 

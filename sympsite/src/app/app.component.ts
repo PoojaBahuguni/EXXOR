@@ -16,7 +16,7 @@ export class AppComponent {
            document.body.style.backgroundColor = "rgba(0,0,0,.8)"
          }
          else{
-          document.body.style.backgroundColor = "#fff"
+          document.body.style.backgroundColor = "rgba(0,0,0,.8)"
          }
     });
   }
