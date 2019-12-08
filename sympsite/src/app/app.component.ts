@@ -11,7 +11,16 @@ import { Router } from '@angular/router'
 export class AppComponent {
   title = 'sympsite';
 
-  constructor() {
+  constructor(private router: Router) {
+    router.events.subscribe((val) => {
+      if(this.router.url === "/contact"){
+        document.body.style.backgroundColor = "rgba(0,0,0,.8)"
+      }
+      else{
+       document.body.style.backgroundColor = "rgba(0,0,0,.8)"
+      }
+  });
+
   }
   getState(outlet){
     return outlet.activatedRouteData.state;
