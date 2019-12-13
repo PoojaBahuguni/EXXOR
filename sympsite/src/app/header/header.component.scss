@@ -4,6 +4,7 @@
     background : inherit;
     border-color: #E7E7E7;
     
+    
 }
 .navbar-default .navbar-brand {
     color:#fff;
@@ -71,4 +72,18 @@
 .fuck{
     height: 70px;
     width: 70px;
+}
+
+.logo{
+    position: absolute;
+    left: 2%;
+    top: 70%;
+    height: 50px;
+    width: 50px;
+}
+
+#navbarNavAltMarkup{
+    position: absolute;
+    top:80%;
+    left: 80%;
 }

@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
-import { scrollAnimation, } from './app.animations';
-import { Router } from '@angular/router'
+import { Router, ActivatedRoute } from '@angular/router'
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   
+  
 })
 export class AppComponent {
   title = 'sympsite';
 
-  constructor() {
+  constructor(private route:ActivatedRoute) {
   }
   getState(outlet){
     return outlet.activatedRouteData.state;
