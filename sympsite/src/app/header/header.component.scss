@@ -6,6 +6,7 @@
     
     
 }
+
 .navbar-default .navbar-brand {
     color:#fff;
     font-size: 25px;
@@ -13,33 +14,12 @@
     font : normal 300 30px/1 'Josefin Sans', sans-serif;
 }
 
-.navbar-contact {
-    background : inherit;
-    border-color: #E7E7E7;
-}
-
-
-
 .navbar-default .navbar-nav >  a {
     color:#fff;
-    padding-right: 20px !important;
-    padding-left: 20px !important;
+    margin-right: 2% !important;
+    margin-left: 2% !important;
     position: relative;
-    letter-spacing: 2px;
-}
-
-.navbar-contact .navbar-brand {
-    color: white;
-    font-size: 25px;
-    padding-left: 25px !important;
-    letter-spacing: 2px;
-}
-
-.navbar-contact .navbar-nav >  a {
-    color:white;
-    padding-right: 20px !important;
-    padding-left: 20px !important;
-    position: relative;
+    left: -10%;
     letter-spacing: 2px;
 }
 
@@ -48,6 +28,7 @@
 .navbar-default .navbar-nav >  a:before{
     transition: all .5s;
 }
+
 .navbar-default .navbar-nav > a:hover {
     color:#fff;
   }
@@ -67,11 +48,6 @@
 
 .navbar-default .navbar-nav > a:hover:after{
     width: 60%;
-}
-
-.fuck{
-    height: 70px;
-    width: 70px;
 }
 
 .logo{

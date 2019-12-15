@@ -63,8 +63,8 @@ export const screenAnimation = trigger('screenAnimation', [
 
 export const slideButton = trigger('slideButton', [
   transition('void => *', [
-      style({  opacity: 0 , position: 'absolute', left: '850px',top : '850px'}),
-      animate('2s ease-in', style({ position: 'absolute', opacity: 1, left: '850px',top : '820px' }))
+      style({  opacity: 0 , position: 'absolute', left: '45%',top : '95%'}),
+      animate('2s ease-in', style({ position: 'absolute', opacity: 1, left: '45%',top : '93%' }))
 
   ])
 ])
