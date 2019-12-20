@@ -1,15 +1,18 @@
 <div class="container" [@pricingAnimation]="planArray.length">
-  <div class="grid">
-    <div class="card card__one text-center" *ngFor="let plan of planArray">
-      <h2 class="card-text">{{plan.plan}}</h2>
-      <hr>
-      <p>{{plan.description}}</p>
-      <p>Starting at</p>
-      <p class="card-text"><i class="fa fa-inr"></i>{{plan.cost}}</p>
-      <p>inclusive of all taxes</p>
-      <button class="btn-details">DETAILS</button>
+  <div class="row">
+    <div class="grid">
+      <div class="card card__one text-center" *ngFor="let plan of planArray">
+        <h2 class="card-text">{{plan.plan}}</h2>
+        <hr>
+        <p>{{plan.description}}</p>
+        <p>Starting at</p>
+        <p class="card-text"><i class="fa fa-inr"></i>{{plan.cost}}</p>
+        <p>inclusive of all taxes</p>
+        <button class="btn-details">DETAILS</button>
+      </div>
     </div>
   </div>
+  
 </div>
 
 <button class="btn-compare" @slideButton>COMPARE</button>

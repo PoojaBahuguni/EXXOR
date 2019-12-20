@@ -39,7 +39,7 @@ h2{
 
 .grid {
   position: absolute;
-    left:18%;
+    left:10%;
     top: 20%;
   display: flex;
   flex-wrap: wrap;
@@ -107,11 +107,10 @@ h2{
 
 .btn-compare{
   position: absolute;
-  left: 850px;
-  top: 820px;
+  left: 45%;
+  top: 93%;
   background: transparent;
   color: #fff;
-  padding: 10px;
   font: normal 300 32px/1 'Josefin Sans', sans-serif;
   border-bottom: 0.15px solid rgb(232, 229,229);
   border-left: none;

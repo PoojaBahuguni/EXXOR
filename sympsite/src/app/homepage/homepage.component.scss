@@ -6,40 +6,33 @@ section {
     height: inherit;
   }
 
-  #WEB_2_ {
-    position: absolute;
-    top: 700px;
-    left: 700px;
-  }
-
-picture{
-  position: absolute;
-  left: 25%;
-  top: 25%;
-  width:50%;
-  height: 50%;
-}
-  section h2 {
   
-    
+
+
+  section h2 {
     color: #fff;
     font : normal 300 32px/1 'Josefin Sans', sans-serif;
-    
     white-space: nowrap;
   }
 
   #content-1 {
     position: absolute;
+    overflow: hidden;
     left: 20%;
-    top : 22%;
-  
+    top : 18%;
+    animation: animated-text 2s steps(30,end) 1s 1 normal both;
   }
 
+  @keyframes animated-text{
+    from{width: 0;}
+    to{width: 475px;}
+  }
   #content-2 {
     position: absolute;
     left: 59%;
-    top : 79%;
-  
+    top : 81%;
+    overflow: hidden;
+    animation: animated-text 2s steps(30,end) 1s 1 normal both;
    }
 
 .demo a {
@@ -116,3 +109,75 @@ picture{
     }
   }
   
+  img{
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    width:50%;
+    height: 50%;
+  }
+
+  @-webkit-keyframes lightSpeedIn {
+    0% {
+      -webkit-transform: translateX(100%) ;
+      opacity: 1;
+    }
+    60% {
+       -webkit-transform: translateX(50%) ;
+       opacity: 1;
+    }
+    80% {
+       -webkit-transform: translateX(0%) ;
+       opacity: 1;
+    }
+    100% {
+       -webkit-transform: translateX(0%) ;
+       opacity: 1;
+    }
+ }
+
+ .animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+ @keyframes lightSpeedIn {
+    0% {
+       transform: translateX(100%) ;
+       opacity: 1;
+    }
+    60% {
+       transform: translateX(50%) ;
+       opacity: 1;
+    }
+    80% {
+       transform: translateX(0%);
+       opacity: 1;
+    }
+    100% {
+       transform: translateX(0%) ;
+       opacity: 1;
+    }
+ }
+
+ .lightSpeedIn {
+    -webkit-animation-name: lightSpeedIn;
+    animation-name: lightSpeedIn;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+ }
+
+ .animated.lightSpeedIn {
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+
+picture{
+  position: absolute;
+  left: 25%;
+  top: 25%;
+  width:50%;
+  height: 50%;
+}

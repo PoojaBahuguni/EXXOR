@@ -16,6 +16,7 @@ import { Validators } from '@angular/forms';
 import { MatTableModule } from '@angular/material'
 import { MatButtonModule } from '@angular/material/button';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,13 +25,14 @@ import { MatButtonModule } from '@angular/material/button';
     HomepageComponent,
     PricingComponent,
     ContactComponent,
+  
     
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
-      { path:'homepage', component: HomepageComponent, data:{ state: 'home'}},
+      { path:'homepage', component: HomepageComponent, data:{ state: 'home'} },
       { path:'pricing', component: PricingComponent, data:{ state: 'pricing'} },
       { path:'about', component: AboutComponent , data:{ state: 'about'}},
       { path:'contact', component: ContactComponent, data:{state: 'contact'}},
