@@ -15,23 +15,25 @@
 }
 
 .navbar-default .navbar-nav >  a {
-    color:#fff;
     margin-right: 2% !important;
     margin-left: 2% !important;
     position: relative;
     left: -10%;
     letter-spacing: 2px;
 }
-
+.colorBlack > a{
+    color:black;
+}
+.colorWhite > a{
+    color: #fff;
+}
 .navbar-default .navbar-nav >  a,
 .navbar-default .navbar-nav >  a:after, 
 .navbar-default .navbar-nav >  a:before{
     transition: all .5s;
 }
 
-.navbar-default .navbar-nav > a:hover {
-    color:#fff;
-  }
+
 
 .navbar-default .navbar-nav > a:after{
     position: absolute;

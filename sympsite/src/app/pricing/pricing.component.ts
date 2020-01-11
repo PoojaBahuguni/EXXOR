@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { pricingAnimation, slideButton } from '../app.animations';
-import { PricingPlan } from '../app.planmodel';
+import { Component, OnInit, AfterViewInit,ViewChild, ElementRef } from '@angular/core';
+import { pricingAnimation, slideButton ,slideLeftAnimation} from '../app.animations';
 @Component({
   selector: 'app-pricing',
   templateUrl: './pricing.component.html',
   styleUrls: ['./pricing.component.scss'],
-  animations : [pricingAnimation, slideButton]
+  animations : [pricingAnimation, slideButton,slideLeftAnimation]
 })
 
-export class PricingComponent implements OnInit {
-  planArray : PricingPlan
+export class PricingComponent implements AfterViewInit {
+  planArray 
+  clicked = false
+  state = "stay"
+  card
+  @ViewChild('card', {static:false}) divView: ElementRef;
+
   constructor() { 
     this.planArray = [ { 
                          plan: 'BASIC', 
@@ -29,7 +33,33 @@ export class PricingComponent implements OnInit {
   ]
   }
 
-  ngOnInit() {
+  ngAfterViewInit(){
+
+    console.log(this.divView);
+    
+
   }
 
+  delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
+}
+  detailsClicked(plan){
+    this.state = "move"
+    this.planArray = this.planArray.filter(function(obj) {
+      return obj.plan == plan;
+      });
+  
+      (async () => { 
+        // Do something before delay
+        console.log(this.state)
+        
+        await this.delay(2000);
+        this.state = "inview"
+        // Do something after
+        console.log(this.state)
+    })();
+  
+  this.clicked = true
+  // this.state = "inview"
+  }
 }

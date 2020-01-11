@@ -18,7 +18,17 @@ export class HeaderComponent implements OnInit {
       }),
     ).forEach(e => {
       this.routeData = route.root.firstChild.snapshot.data.state;
-      console.log(this.routeData);
+      // console.log(this.routeData);
+      if(this.routeData === "contact"){
+        this.routeChanged = true
+        // console.log(this.routeChanged);
+        
+      }
+      else{
+        this.routeChanged = false
+        // console.log(this.routeChanged);
+        
+      }
     });
   }
    

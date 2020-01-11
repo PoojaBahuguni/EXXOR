@@ -1,20 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { treesAnimation, screenAnimation, treesDestroyAnimation } from '../app.animations';
-import { Router } from '@angular/router';
+import { appearAnimation, screenAnimation, treesDestroyAnimation, lightSpeedAnimation } from '../app.animations';
 
 
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.scss'],
-  animations: [treesAnimation, screenAnimation,treesDestroyAnimation],
+  animations: [appearAnimation, 
+                screenAnimation,
+                treesDestroyAnimation,
+                lightSpeedAnimation,
+              ],
 })
-export class HomepageComponent implements OnInit {
+export class HomepageComponent {
+  
   
   constructor() { 
-  
+    
   }
 
-  ngOnInit() {
-  }
+  
 }

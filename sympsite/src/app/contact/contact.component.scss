@@ -51,12 +51,22 @@
   }
 
 .contact-options {
-    border: 1.7px solid rgb(110, 110, 110);
+    
     display: flex;
     align-self: center;
     width: 38%;
     border-radius: 5px;
     font-size: 22px;
+    background-image:
+    linear-gradient(90deg, white 50%,rgba(0,0,0,.8) 50%),
+    linear-gradient(-90deg, rgba(0,0,0,.8) 50%, white 50%);
+    border-right: 2px solid rgba(0,0,0,.8);
+    border-left: 2px solid white;
+    background-size: 100% 2px;
+    background-repeat: no-repeat;
+    background-position:
+    top left,
+    bottom left;
 }
 
 .contact-option {
@@ -65,12 +75,23 @@
     align-items: center;
     justify-content: center;
     padding: 5px;
+    
 }
 
-.contact-option:not(:last-child) {
-    border-right: 1.7px solid rgb(110, 110, 110);
+.contact-option:first-child {
+    border-right: 1.7px solid white;
+}
+.email,
+.phone{
+    color:white;
 }
 
+.map{
+    color:rgba(0,0,0,.8);
+}
+.contact-option:last-child{
+    border-left: 1.7px solid rgba(0,0,0,.8);
+}
 .contact-option-text {
     font-size: 18px;
     margin-left: 7px;
