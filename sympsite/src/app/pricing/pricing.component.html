@@ -1,5 +1,6 @@
-<div class="container" [@pricingAnimation]="state">
-    <div class="row">
+<div class="container">
+<div [@pricingAnimation]="state">
+    
       <div class="grid">
         <div class="card card__one text-center" *ngFor="let plan of planArray" >
           <h2 class="card-text">{{plan.plan}}</h2>
@@ -11,7 +12,7 @@
           <button class="btn-details" (click)="detailsClicked(plan.plan)">DETAILS</button>
         </div>
       </div>
-    </div>
+    
     
   </div>
   
@@ -27,4 +28,4 @@
     <h2>Google analytics integration</h2>
   </div>
   
-  
+</div>

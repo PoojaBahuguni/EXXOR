@@ -1,11 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  styleUrls: ['./contact.component.scss'],
+  // encapsulation: ViewEncapsulation.None
 })
 export class ContactComponent implements OnInit {
 
@@ -16,7 +19,12 @@ export class ContactComponent implements OnInit {
     Validators.email,
   ]);
 
-  constructor() { }
+  routeChanged : boolean;
+
+  routeData = null;
+  constructor() {
+   
+  }
 
   ngOnInit() {
   }

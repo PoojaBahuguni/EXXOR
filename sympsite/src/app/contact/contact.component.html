@@ -1,56 +1,72 @@
 <div class="contact-page">
-    <div class="content">
-      <div class="contact-image">
-        <img src="/assets/Contact-new.png" alt="fuck">
-      </div>
-      <div class="contact-form">
-        <div class="hello-image">
-            <img src="/assets/hello.svg" alt="fuck">
-        </div>
-        <form class="example-form">
-            <mat-form-field class="example-full-width">
-                <mat-icon matSuffix style="margin-right: 10px;">message</mat-icon>
-                <input matInput style="margin-bottom: 5px;" placeholder="Message">
-              </mat-form-field>
-          <mat-form-field class="example-full-width">
-            <mat-icon matSuffix style="margin-right: 10px;">email</mat-icon>
-            <input matInput style="margin-bottom: 5px;" placeholder="Email">
-          </mat-form-field>
-          <!-- <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Email" [formControl]="emailFormControl">
-                    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-                      Please enter a valid email address
-                    </mat-error>
-                    <mat-error *ngIf="emailFormControl.hasError('required')">
-                      Email is <strong>required</strong>
-                    </mat-error>
-            </mat-form-field> -->
-        </form>
     
-        <!-- <button mat-flat-button color="primary" class="submit-button">
-          <mat-icon matSuffix [inline]="true">send</mat-icon>
-          <span class="button-text">Send</span>
-        </button> -->
-      </div>
+  <div class="content">
+    <div class="contact-image">
+
+      <img src="/assets/Contact-new.png" alt="fuck">
+
     </div>
-    <div class="contact-options">
-      <div class="contact-option phone">
-        <mat-icon matSuffix [inline]="true">phone</mat-icon>
-        <span class="contact-option-text">
-          Call
-        </span>
+    <div class="contact-form">      
+      <div>
+        <div class="hello-header">
+          <div class="contact-content">
+            <p>The rudimentary process of buisness starts with greeting</p>
+          </div>
+          <img class="hello-image" src="/assets/hello.svg" alt="fuck">
+        </div>
       </div>
-      <div class="contact-option ">
-        <mat-icon matSuffix [inline]="true" class="email">email</mat-icon>
-        <span class="contact-option-text">
-          <span><a style="color:white">E</a><a style="color: rgba(0,0,0,.8);">mail</a></span>
-        </span>
-      </div>
-      <div class="contact-option map">
-        <mat-icon matSuffix [inline]="true">map</mat-icon>
-        <span class="contact-option-text">
-          Map
-        </span>
-      </div>
+      <form class="example-form">
+          <mat-form-field class="example-full-width" [floatLabel]="'never'">
+              <mat-icon matSuffix style="margin-right: 10px;">message</mat-icon>
+              <input matInput style="margin-bottom: 5px;" placeholder="Send your message here" >
+            </mat-form-field> 
+      </form>
+      <div class="contact-content">
+          <p>let's join hands and begin</p>
+        </div>
+      <div class="contact-options">
+        <div class="contact-option">
+          <mat-icon matSuffix [inline]="true">phone</mat-icon>
+          <span class="contact-option-text">
+            Call
+          </span>
+        </div>
+        <div class="contact-option">
+          <mat-icon matSuffix [inline]="true">email</mat-icon>
+          <span class="contact-option-text">
+            Email
+          </span>
+        </div>
+        <div class="contact-option">
+          <mat-icon matSuffix [inline]="true">map</mat-icon>
+          <span class="contact-option-text">
+            Map
+          </span>
+        </div>
+      <!-- <button mat-flat-button color="primary" class="submit-button">
+        <mat-icon matSuffix [inline]="true">send</mat-icon>
+        <span class="button-text">Send</span>
+      </button> -->
     </div>
+  </div>
+  <!-- <div class="contact-options">
+    <div class="contact-option">
+      <mat-icon matSuffix [inline]="true">phone</mat-icon>
+      <span class="contact-option-text">
+        Call
+      </span>
     </div>
+    <div class="contact-option">
+      <mat-icon matSuffix [inline]="true">email</mat-icon>
+      <span class="contact-option-text">
+        Email
+      </span>
+    </div>
+    <div class="contact-option">
+      <mat-icon matSuffix [inline]="true">map</mat-icon>
+      <span class="contact-option-text">
+        Map
+      </span>
+    </div> -->
+  </div>
+  </div>

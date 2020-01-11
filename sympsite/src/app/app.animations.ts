@@ -72,13 +72,13 @@ export const pricingAnimation = trigger('pricingAnimation', [
           ]),{ optional: true }),
         ])
     ]),
-    transition('move => inview', [
-      style({opacity: 0, position:'absolute', top:'20%'}),
-        animate('1s ease-in', keyframes([
-          style({ opacity: 0, transform: 'translateX(20px)', offset: 0.5}),
-          style({ opacity: 1, transform: 'translateX(0px)', offset: 1})
-        ]))
-      ])
+    // transition('move => inview', [
+    //   style({opacity: 0, position:'absolute', top:'20%'}),
+    //     animate('1s ease-in', keyframes([
+    //       style({ opacity: 0, transform: 'translateX(20px)', offset: 0.5}),
+    //       style({ opacity: 1, transform: 'translateX(0px)', offset: 1})
+    //     ]))
+    //   ])
     ])
 
 
