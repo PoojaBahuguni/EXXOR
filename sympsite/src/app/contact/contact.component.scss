@@ -6,7 +6,8 @@
     // color: rgb(110, 110, 110);
     color: white;
     margin-top: 70px;
-    overflow-x:hidden;
+    // overflow-x: hidden;
+    width: 100%;
     //background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 50%, #fff 50%); 
     // height: 100vh;
 }
@@ -74,7 +75,7 @@
 /** Overrides caret & text color **/
 .example-full-width.mat-form-field-appearance-legacy .mat-input-element {
     caret-color: rgb(0,0,0,0.8);
-     color: white;
+     color: black;
 }
 mat-icon{
     color: rgb(0,0,0,0.8);
@@ -89,6 +90,7 @@ mat-icon{
     flex-direction: column;
     align-self: flex-end;
     margin-bottom: 40px;
+    color: black;
 }
 
 
