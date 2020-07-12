@@ -20,6 +20,7 @@ export class HomepageComponent {
   }
 
   mouseWheelDownFunc(event){
+    console.log("mouse wheel down");
     
     this.router.navigateByUrl('about');
   }

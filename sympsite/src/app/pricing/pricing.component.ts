@@ -10,22 +10,22 @@ import { pricingAnimation, slideButton ,slideLeftAnimation} from '../app.animati
 export class PricingComponent implements OnInit {
   planArray 
   clicked = false
-
+  showDiv = true
   constructor() { 
     this.planArray = [ { 
                          plan: 'BASIC', 
                          description: 'Perfect for most businesses who want to look their best and convert leads',
-                         cost: ' 56,640/-'
+                         cost: ' 50,000/-'
                         },
                          {
                            plan: 'PROFESSIONAL', 
                            description: 'Perfect for businesses who have dynamic website content and functionality',
-                           cost: ' 1,09,740/-'
+                           cost: ' 95,000/-'
                          },
                          {
                           plan: 'PREMIUM', 
                           description: 'Perfect for e-tailers and businesses that have large sites or online catalogues',
-                          cost: ' 1,60,480/-'
+                          cost: ' 1,40,000/-'
                         }                        
   ]
   }
@@ -39,7 +39,12 @@ ngOnInit(){
     return new Promise( resolve => setTimeout(resolve, ms) );
 }
   detailsClicked(plan){
-    
+    if(plan === "BASIC"){
+      this.showDiv = false;
+    }
+    else{
+      this.showDiv = true;
+    }
     this.planArray = this.planArray.filter(function(obj) {
       return obj.plan == [{}];
       });
@@ -56,6 +61,28 @@ ngOnInit(){
     })();
     // console.log("waiting ended");
     
+    
     this.clicked = true
+  }
+
+  backClicked(){
+      this.clicked = false;
+      this.planArray = [ { 
+          plan: 'BASIC', 
+          description: 'Perfect for most businesses who want to look their best and convert leads',
+          cost: ' 50,000/-'
+         },
+          {
+            plan: 'PROFESSIONAL', 
+            description: 'Perfect for businesses who have dynamic website content and functionality',
+            cost: ' 95,000/-'
+          },
+          {
+           plan: 'PREMIUM', 
+           description: 'Perfect for e-tailers and businesses that have large sites or online catalogues',
+           cost: ' 1,40,000/-'
+         }                        
+];
+
   }
 }

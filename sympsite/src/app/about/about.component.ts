@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { aboutIllustration, aboutParagraph } from '../app.animations';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -9,9 +10,20 @@ import { aboutIllustration, aboutParagraph } from '../app.animations';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  mouseWheelDownFunc(event){
+    console.log("mouse wheel down");
+    
+    this.router.navigateByUrl('pricing');
+  }
+
+  mouseWheelUpFunc(event){
+    console.log("up");
+    
+    this.router.navigateByUrl('home')
+  }
 }
