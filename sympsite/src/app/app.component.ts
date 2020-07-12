@@ -10,8 +10,9 @@ import { filter } from 'rxjs/operators';
   
   
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'sympsite';
+  loaded = true;
   routeData 
   constructor(private router: Router, private route:ActivatedRoute) {
     this.router.events.pipe(
@@ -20,7 +21,6 @@ export class AppComponent {
       }),
     ).forEach(e => {
       this.routeData = route.root.firstChild.snapshot.data.state;
-      console.log(this.routeData);
       if(this.routeData === "contact")
     {
       document.body.style.background = "linear-gradient(90deg, rgba(0,0,0,.8) 50%, white  50%)"
@@ -34,8 +34,25 @@ export class AppComponent {
     
   }
 
-  
+  ngOnInit(){
+    this.loaded = true;
+    (async () => { 
+      // Do something before delay
+      console.log('before delay')
 
+      await this.delay(2000);
+
+      // Do something after
+      console.log('after delay')
+  })();
+    this.loaded = false;
+  }
+  
+  delay(ms: number) {
+    // console.log("inside delay");
+    
+    return new Promise( resolve => setTimeout(resolve, ms) );
+}
   getState(outlet){
     return outlet.activatedRouteData.state;
   }

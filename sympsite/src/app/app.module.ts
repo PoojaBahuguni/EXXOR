@@ -15,7 +15,7 @@ import { FormControl } from '@angular/forms';
 import { Validators } from '@angular/forms';
 import { MatTableModule } from '@angular/material'
 import { MatButtonModule } from '@angular/material/button';
-
+import { MouseWheelDirective } from './mousewheel.directive';
 
 @NgModule({
   declarations: [
@@ -25,19 +25,19 @@ import { MatButtonModule } from '@angular/material/button';
     HomepageComponent,
     PricingComponent,
     ContactComponent,
-  
+    MouseWheelDirective
     
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([
-      { path:'homepage', component: HomepageComponent, data:{ state: 'home'} },
+      { path:'home', component: HomepageComponent, data:{ state: 'home'} },
       { path:'pricing', component: PricingComponent, data:{ state: 'pricing'} },
       { path:'about', component: AboutComponent , data:{ state: 'about'}},
       { path:'contact', component: ContactComponent, data:{state: 'contact'}},
-      { path:'', redirectTo: 'homepage', pathMatch: 'full'}
-    ],{ preloadingStrategy: PreloadAllModules }),
+      { path:'', redirectTo: 'home', pathMatch: 'full'}
+    ],{ preloadingStrategy: PreloadAllModules, useHash: true }),
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,

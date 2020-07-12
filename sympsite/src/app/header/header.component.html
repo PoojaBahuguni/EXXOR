@@ -1,16 +1,11 @@
+
 <nav class = "navbar navbar-expand-lg navbar-default">
- 
-  <a class="navbar-brand" [routerLink]="['/homepage']"> <span><img class="logo" src="/assets/Logo.svg" alt=""></span></a>
-  <!--a [routerLink]="['/homepage']"><img class="fuck" src="/assets/LOGO-1.svg" alt="fuck"/></a-->
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  <a class="navbar-brand" [routerLink]="['/home']"> <span><img class="logo" src="/assets/Logo.svg" alt=""></span></a>
+  <div class="collapse navbar-collapse d-none d-sm-block" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto" [ngClass]="routeChanged?'colorBlack':'colorWhite'">
-      <a class="nav-item nav-link" [routerLink]= "['/about']">ABOUT</a>
-      <a class="nav-item nav-link" [routerLink]= "['/pricing']">PRICING</a>
-      <a class="nav-item nav-link" [routerLink]= "['/contact']">CONTACT</a>
-      
+      <a class="nav-item nav-link ml-2" [routerLink]= "['/about']">ABOUT</a>
+      <a class="nav-item nav-link ml-2" [routerLink]= "['/pricing']">PRICING</a>
+      <a class="nav-item nav-link ml-2" [routerLink]= "['/contact']">CONTACT</a> 
     </div>
   </div>
 </nav>

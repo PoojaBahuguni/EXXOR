@@ -1,7 +1,18 @@
-<div class="bg">
+<div class="container-fluid">
+        <div class="loading-screen-wrapper" [hidden]="!loaded">
+            <div class="loading-screen-icon">
+                Loading...
+            </div>
+        </div>
+        <app-header [hidden]="loaded"></app-header>
+        <router-outlet [hidden]="loaded"></router-outlet>
+</div>
+
+
+<!-- <div class="bg">
     <app-header></app-header>
     <router-outlet #o="outlet"></router-outlet>
-</div>
+</div>  -->
 
 
 <!--[@scrollAnimation]="getState(o)"-->

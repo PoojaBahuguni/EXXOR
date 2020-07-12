@@ -52,7 +52,7 @@ export const treesDestroyAnimation =   trigger('treesDestroyAnimation', [
       
 export const pricingAnimation = trigger('pricingAnimation', [
 
-  transition('void =>stay, stay => move', [
+  transition('* <=> *', [
     
     query(':enter', style({ opacity: 0}), {optional: true}),
         query(':leave', style({ opacity: 1}), {optional: true}),
@@ -98,8 +98,13 @@ export const screenAnimation = trigger('screenAnimation', [
 
 export const slideButton = trigger('slideButton', [
   transition('void => *', [
-      style({  opacity: 0 , position: 'absolute', left: '45%',top : '95%'}),
-      animate('2s ease-in', style({ position: 'absolute', opacity: 1, left: '45%',top : '93%' }))
+      style({  opacity: 0 }),
+      animate('2s ease-in', keyframes([
+        style({ opacity: 0,  transform: 'translateY(15px)', offset: 0.1}),
+        style({ opacity: .5, transform: 'translateY(10px)', offset: .2}),
+        style({ opacity: 1, transform: 'translateY(5px)', offset: .4}),
+        style({ opacity: 1, transform: 'translateY(0px)', offset: 1}),
+      ]))
 
   ])
 ])
@@ -127,8 +132,8 @@ export const aboutParagraph = trigger('aboutParagraph', [
 export const slideLeftAnimation = trigger('slideLeftAnimation', [
   transition('void => *', [
     style({opacity: 0}),
-    animate('2.5s ease-in', keyframes([
-      style({transform: 'translateX(-50px)', offset: 0.3}),
+    animate('3s ease-in', keyframes([
+      style({transform: 'translateX(-50px)', offset: 0.5}),
       style({ opacity:1, transform: 'translateX(0px)', offset: 1})
     ]))
   ])

@@ -1,135 +1,114 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
 
-.contact-page{
-    display: flex;
-    flex-direction: column;
-    // color: rgb(110, 110, 110);
-    color: white;
-    margin-top: 70px;
-    // overflow-x: hidden;
-    width: 100%;
-    //background: linear-gradient(90deg, rgba(0, 0, 0, 0.8) 50%, #fff 50%); 
-    // height: 100vh;
-}
-
-.contact-content{
-    font : normal 300 22px/1 'Josefin Sans', sans-serif;
-    align-self: center;
-    color: rgb(0,0,0,0.8);
-    text-align: center;
-    margin-top: 10px;
-}
-
-.content{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 6%;
-    margin-top: 2%;
-    justify-content: space-evenly;
-}
 
 .contact-image{
-    width: 50%;
-}
-.hello-image{
-    width: 35%;
-    margin-left: 130px;
-    display: flex;
-    flex-direction: column;
-    // align-self: center;
-}
-.hello-header{
-    display: flex;
-    flex-direction: column;
-}
-/* .contact-image, .contact-form{
-    display: inline-flex;
-} */
-#block_container {
-    display: inline;
+    margin: 10%;
+    
+    width: 70%;
 }
 
-// ::ng-deep .mat-form-field-underline, ::ng-deep .mat-form-field-ripple{
-//     background-color: white !important;
-// }
-::ng-deep .mat-form-field-label{
-    color: rgb(0,0,0,0.8) !important;
-    font : normal 300 18px/1 'Josefin Sans', sans-serif !important;
-}
-
-::ng-deep .mat-form-field-underline{
-    background-color:  rgb(20, 210, 238)!important;
-    // background-color: black !important;
-}
-::ng-deep .mat-form-field-ripple{
-    background-color: rgb(194, 242, 152) !important;
-    // background-color: black !important;
-}
-
-
-
-// .example-full-width.mat-form-field-appearance-legacy.mat-focused
-//     .mat-form-field-label {
-//     color: white;
-// }
-/** Overrides caret & text color **/
-.example-full-width.mat-form-field-appearance-legacy .mat-input-element {
-    caret-color: rgb(0,0,0,0.8);
-     color: black;
-}
-mat-icon{
-    color: rgb(0,0,0,0.8);
-}
 .contact-form{
-    /* float: right;
-    margin-right: 200px;
-    margin-top: 250px; */
     right: auto;
     width: 35%;
-    display: flex;
-    flex-direction: column;
-    align-self: flex-end;
-    margin-bottom: 40px;
     color: black;
+
+    .contact-content-1{
+        margin-top:15%;
+        font : normal 300 22px/1 'Josefin Sans', sans-serif;
+        align-self: center;
+        color: rgb(0,0,0,0.8);
+        text-align: center;   
+    }
+    .hello-image{
+        margin-top:5%;
+        width: 30%;
+        margin-left: 35%;
+        display: flex;
+        flex-direction: column;
+    }
+    .example-form {
+        margin-left: 30%;
+        min-width: 20%;
+        max-width: 40%;
+        width: 100%;
+        align-self: center;
+
+        .example-full-width {
+            width: 100%;
+          }
+        .example-full-width .mat-form-field-appearance-legacy .mat-input-element {
+            caret-color: rgb(0,0,0,0.8);
+            color: black;
+        }
+        ::ng-deep .mat-form-field-label{
+            color: rgb(0,0,0,0.8) !important;
+            font : normal 300 18px/1 'Josefin Sans', sans-serif !important;
+            
+        }
+        ::ng-deep .mat-form-field-underline{
+            background-color:  rgb(20, 210, 238)!important; 
+        }
+        ::ng-deep .mat-form-field-ripple{
+            background-color: rgb(194, 242, 152) !important;
+            
+        }
+        
+      }
+    .contact-content-2{
+        margin-right: 3%;
+        margin-top: 5%;
+        font : normal 300 22px/1 'Josefin Sans', sans-serif;
+        align-self: center;
+        color: rgb(0,0,0,0.8);
+        text-align: center;   
+    }
+    .contact-options {
+        margin-left: 25%;
+        margin-top: 5%;
+        border: 1px solid rgb(0,0,0,0.8);
+        display: flex;
+        align-self: center;
+        width: 50%;
+        border-radius: 5px;
+        font-size: 22px;
+
+        .contact-option {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            mat-icon{
+                color: rgb(0,0,0,0.8);
+            }
+            .contact-option-text {
+                color: rgb(0,0,0,0.8);
+                font : normal 300 18px/1 'Josefin Sans', sans-serif ;
+            } 
+        }
+        .contact-option:not(:last-child) {
+            border-right: 1px solid rgb(0,0,0,0.8);
+        }
+    }
 }
 
 
-.example-form {
-    min-width: 200px;
-    max-width: 400px;
-    width: 100%;
-    align-self: center;
-  }
+
+
+
+
+
+
+
+
+
+
   
-  .example-full-width {
-    width: 100%;
-  }
+  
 
-.contact-options {
-    border: 1px solid rgb(0,0,0,0.8);
-    display: flex;
-    align-self: center;
-    width: 68%;
-    margin-top: 25px;
-    border-radius: 5px;
-    font-size: 22px;
-}
 
-.contact-option {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-}
 
-.contact-option:not(:last-child) {
-    border-right: 1px solid rgb(0,0,0,0.8);
-}
 
-.contact-option-text {
-    margin-left: 7px;
-    color: rgb(0,0,0,0.8);
-    font : normal 300 18px/1 'Josefin Sans', sans-serif ;
 
-}
+
+

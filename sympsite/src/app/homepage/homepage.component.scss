@@ -1,41 +1,60 @@
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
 
-
-
-section {
-    height: inherit;
-  }
-
-  
-
-
-  section h2 {
+.conatiner-fluid{
+  height: inherit;
+}
+  h2 {
     color: #fff;
     font : normal 300 32px/1 'Josefin Sans', sans-serif;
-    white-space: nowrap;
   }
 
-  #content-1 {
-    position: absolute;
-    overflow: hidden;
-    left: 20%;
-    top : 18%;
-    animation: animated-text 2s steps(30,end) 1s 1 normal both;
+  .content-1 {
+    padding-left: 23%;
+    margin-top:5%;
+    h2{
+      overflow: hidden;
+      animation: animated-text 2s steps(30,end) 1s 1 normal both;
+      
+    }
+  }
+
+
+  .main-illus{
+    padding-left: 25%;
+    padding-top: 2%;
+    padding-right: 25%;
   }
 
   @keyframes animated-text{
-    from{width: 0;}
-    to{width: 475px;}
-  }
-  #content-2 {
-    position: absolute;
-    left: 59%;
-    top : 81%;
-    overflow: hidden;
-    animation: animated-text 2s steps(30,end) 1s 1 normal both;
-   }
+    0% {
+      width: 0;
+      white-space: nowrap;
+    }
+    50% {
+      width: 50%;
+      white-space: nowrap;
+    }
+    90% {
+      width: 100%;
+      white-space: nowrap;
+    }
+    100%{
+      width:100%;
+      white-space: none;
 
-.demo a {
+    }
+  }
+  .content-2 {
+    padding-left: 65%;
+    margin-top:3%;
+    h2{
+      overflow: hidden;
+      animation: animated-text 2s steps(30,end) 1s 1 normal both;
+      
+    }
+  }
+
+.slide-btn a {
     position: fixed;
     bottom: 1px;
     left: 50%;
@@ -49,14 +68,14 @@ section {
     text-decoration: none;
     transition: opacity .3s;
   }
-  .demo a:hover {
+  .slide-btn a:hover {
     opacity: .5;
   }
 
-#section07 a {
+.slide-btn a {
     padding-top: 50px;
   }
-  #section07 a span {
+  .slide-btn a span {
     position: absolute;
     top: 0;
     left: 50%;
@@ -72,16 +91,16 @@ section {
     opacity: 0;
     box-sizing: border-box;
   }
-  #section07 a span:nth-of-type(1) {
+  .slide-btn a span:nth-of-type(1) {
     -webkit-animation-delay: 0s;
     animation-delay: 0s;
   }
-  #section07 a span:nth-of-type(2) {
+  .slide-btn a span:nth-of-type(2) {
     top: 16px;
     -webkit-animation-delay: .15s;
     animation-delay: .15s;
   }
-  #section07 a span:nth-of-type(3) {
+  .slide-btn a span:nth-of-type(3) {
     top: 32px;
     -webkit-animation-delay: .3s;
     animation-delay: .3s;
@@ -109,13 +128,7 @@ section {
     }
   }
   
-  img{
-    position: absolute;
-    left: 25%;
-    top: 25%;
-    width:50%;
-    height: 50%;
-  }
+  
 
   @-webkit-keyframes lightSpeedIn {
     0% {
@@ -174,10 +187,3 @@ section {
   animation-duration: 1.5s;
 }
 
-picture{
-  position: absolute;
-  left: 25%;
-  top: 25%;
-  width:50%;
-  height: 50%;
-}

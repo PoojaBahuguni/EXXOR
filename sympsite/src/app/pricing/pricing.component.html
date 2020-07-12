@@ -1,31 +1,47 @@
 <div class="container">
-<div [@pricingAnimation]="state">
-    
-      <div class="grid">
-        <div class="card card__one text-center" *ngFor="let plan of planArray" >
-          <h2 class="card-text">{{plan.plan}}</h2>
-          <hr>
-          <p>{{plan.description}}</p>
-          <p>Starting at</p>
-          <p class="card-text"><i class="fa fa-inr"></i>{{plan.cost}}</p>
-          <p>inclusive of all taxes</p>
-          <button class="btn-details" (click)="detailsClicked(plan.plan)">DETAILS</button>
-        </div>
-      </div>
-    
-    
+  <div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        <div [@pricingAnimation]=planArray.length>
+            <div class="grid">
+              <div class="card card__one text-center" *ngFor="let plan of planArray">
+                <h2 class="card-text">{{plan.plan}}</h2>
+                <hr>
+                <p>{{plan.description}}</p>
+                <p>Starting at</p>
+                <p class="card-text"><i class="fa fa-inr"></i>{{plan.cost}}</p>
+                <p>inclusive of all taxes</p>
+                <button class="btn-details" (click)="detailsClicked(plan.plan)">DETAILS</button>
+              </div>
+            </div>
+          </div>
+    </div>
   </div>
-  
-  <button class="btn-compare" @slideButton>COMPARE</button>
-  
-  <div class="details" *ngIf="clicked" @slideLeftAnimation>
-    <h2>Custom Design</h2>
-    <h2>Custom Illustration</h2>
-    <h2>Image search</h2>
-    <h2>Responsive design</h2>
-    <h2>Color theme creation</h2>
-    <h2>Microformats (SEO)</h2>
-    <h2>Google analytics integration</h2>
+  <div class="row" *ngIf="clicked" @slideLeftAnimation>
+     
+          
+              <div class="details col-sm-6 col-md-6 col-lg-6">
+                <h2>Custom Design</h2>
+                <p>let your story flow through us and we’ll find the best theme which defines the company</p>
+                <h2>Custom Illustration</h2>
+                <p>comprehensive illustrations, meaning you can understand and analyze in a simple manner</p>
+                <h2>Image search</h2>
+                <p>we yield images for the for the ideas you bring forth</p>
+                <h2>Responsive design</h2>
+                <p>Making your website look great , converting all visitors no matter the device</p>
+              </div>
+              <div class="details col-sm-6 col-md-6 col-lg-6">
+                <h2>Color theme creation</h2>
+                <p>We define a creative color theme which is systematically set to make your website look rich with colors</p>
+                <h2>Microformats (SEO)</h2>
+                <p>Address the use of micro formats which search engines love and understand to better your rankings</p>
+                <h2>Google analytics integration</h2>
+                <p>Receive updates every month regarding in-depth detail about traffic inflow and how we shape the success strategy of your business</p>
+              </div>
+          
+        
   </div>
+  <!-- <div class="row" >
+    <button class="btn-compare" @slideButton>COMPARE</button>
+  </div> -->
   
 </div>

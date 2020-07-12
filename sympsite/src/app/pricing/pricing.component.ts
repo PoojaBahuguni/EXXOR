@@ -7,59 +7,55 @@ import { pricingAnimation, slideButton ,slideLeftAnimation} from '../app.animati
   animations : [pricingAnimation, slideButton,slideLeftAnimation]
 })
 
-export class PricingComponent implements AfterViewInit {
+export class PricingComponent implements OnInit {
   planArray 
   clicked = false
-  state = "stay"
-  card
-  @ViewChild('card', {static:false}) divView: ElementRef;
 
   constructor() { 
     this.planArray = [ { 
                          plan: 'BASIC', 
                          description: 'Perfect for most businesses who want to look their best and convert leads',
-                         cost: '45,000/-'
+                         cost: ' 56,640/-'
                         },
                          {
                            plan: 'PROFESSIONAL', 
                            description: 'Perfect for businesses who have dynamic website content and functionality',
-                           cost: '90,000/-'
+                           cost: ' 1,09,740/-'
                          },
                          {
                           plan: 'PREMIUM', 
                           description: 'Perfect for e-tailers and businesses that have large sites or online catalogues',
-                          cost: '1,50,000/-'
+                          cost: ' 1,60,480/-'
                         }                        
   ]
   }
 
-  ngAfterViewInit(){
+ngOnInit(){
 
-    console.log(this.divView);
-    
-
-  }
-
+}
   delay(ms: number) {
+    // console.log("inside delay");
+    
     return new Promise( resolve => setTimeout(resolve, ms) );
 }
   detailsClicked(plan){
-    this.state = "move"
+    
     this.planArray = this.planArray.filter(function(obj) {
-      return obj.plan == plan;
+      return obj.plan == [{}];
       });
-  
+      // console.log("started waiting");
+      
       (async () => { 
         // Do something before delay
-        console.log(this.state)
-        
+        console.log('before delay')
+
         await this.delay(2000);
-        this.state = "inview"
+
         // Do something after
-        console.log(this.state)
+        console.log('after delay')
     })();
-  
-  this.clicked = true
-  // this.state = "inview"
+    // console.log("waiting ended");
+    
+    this.clicked = true
   }
 }
