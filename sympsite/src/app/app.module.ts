@@ -16,8 +16,15 @@ import { Validators } from '@angular/forms';
 import { MatTableModule } from '@angular/material'
 import { MatButtonModule } from '@angular/material/button';
 import { MouseWheelDirective } from './mousewheel.directive';
+import { AppRoutingModule } from './app-routing.module';
+import { MobileHomepageComponent } from './mobile-homepage/mobile-homepage.component';
+import { MobileHeaderComponent } from './header/mobile-header/mobile-header.component';
+import { DesktopHeaderComponent } from './header/desktop-header/desktop-header.component';
+
+
 
 @NgModule({
+  entryComponents: [MobileHomepageComponent],
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -25,19 +32,17 @@ import { MouseWheelDirective } from './mousewheel.directive';
     HomepageComponent,
     PricingComponent,
     ContactComponent,
-    MouseWheelDirective
+    MouseWheelDirective,
+    MobileHomepageComponent,
+    MobileHeaderComponent,
+    DesktopHeaderComponent,
+    
     
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot([
-      { path:'home', component: HomepageComponent, data:{ state: 'home'} },
-      { path:'pricing', component: PricingComponent, data:{ state: 'pricing'} },
-      { path:'about', component: AboutComponent , data:{ state: 'about'}},
-      { path:'contact', component: ContactComponent, data:{state: 'contact'}},
-      { path:'', redirectTo: 'home', pathMatch: 'full'}
-    ],{ preloadingStrategy: PreloadAllModules, useHash: true }),
+    AppRoutingModule,
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,

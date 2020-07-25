@@ -1,11 +1,7 @@
+<div class="desktop-container" *ngIf="!isMobileResolution; else mobileContainer">
+  <app-desktop-header></app-desktop-header>
+</div>
 
-<nav class = "navbar navbar-expand-lg navbar-default">
-  <a class="navbar-brand" [routerLink]="['/home']"> <span><img class="logo" src="/assets/Logo.svg" alt=""></span></a>
-  <div class="collapse navbar-collapse d-none d-sm-block" id="navbarNavAltMarkup">
-    <div class="navbar-nav ml-auto" [ngClass]="routeChanged?'colorBlack':'colorWhite'">
-      <a class="nav-item nav-link ml-2" [routerLink]= "['/about']">ABOUT</a>
-      <a class="nav-item nav-link ml-2" [routerLink]= "['/pricing']">PRICING</a>
-      <a class="nav-item nav-link ml-2" [routerLink]= "['/contact']">CONTACT</a> 
-    </div>
-  </div>
-</nav>
+<ng-template #mobileContainer>
+  <app-mobile-header></app-mobile-header>
+</ng-template>

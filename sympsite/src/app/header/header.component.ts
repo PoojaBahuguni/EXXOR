@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd  } from '@angular/router';
 import { filter, every } from 'rxjs/operators';
+import { ApplicationStateService } from '../application-state.service';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +10,10 @@ import { filter, every } from 'rxjs/operators';
 })
 export class HeaderComponent implements OnInit {
   routeChanged : boolean;
-
+  public isMobileResolution: boolean;
   routeData = null;
-  constructor(private router: Router, private route: ActivatedRoute) {
+  constructor(private router: Router, private route: ActivatedRoute,
+    private applicationStateService: ApplicationStateService) {
     this.router.events.pipe(
       filter(e => {
         return e instanceof NavigationEnd;
@@ -30,6 +32,7 @@ export class HeaderComponent implements OnInit {
         
       }
     });
+    this.isMobileResolution = applicationStateService.getIsMobileResolution();
   }
    
   ngOnInit() {

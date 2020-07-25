@@ -1,0 +1,54 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+
+.navbar-default {
+    background : inherit;
+    border-color: #E7E7E7;
+}
+
+
+.navbar-default .navbar-brand {
+    color:#fff;
+    font-size: 25px;
+    font : normal 300 30px/1 'Josefin Sans', sans-serif;
+}
+
+
+
+.navbar-default .navbar-nav >  a {
+    letter-spacing: 2px;
+    text-decoration: none;
+    position: relative;
+}
+  
+.navbar-default .navbar-nav >  a::after {
+    position: absolute;
+    content: "";
+    height: 3%;
+    top: 100%;
+    background: currentColor;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    transition: transform 1s ;
+  }
+  
+.navbar-default .navbar-nav > a:hover::after {
+    // transition-timing-function: cubic-bezier(.19, 1, .22, 1);  
+    transform: scaleX(1);
+  }
+  
+.colorBlack > a{
+    color:black;
+}
+.colorWhite > a{
+    color: #fff;
+}
+
+
+
+.logo{
+    height: 50px;
+    width: 50px;
+}
+
