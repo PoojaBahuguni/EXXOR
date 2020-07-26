@@ -1,23 +1,40 @@
+
 p{
     color: #fff;
-    font : normal 300 16px/1 'Josefin Sans', sans-serif;
+    font : normal 300 18px/1 'Josefin Sans', sans-serif;
 }
 
+
+.tag-line{
+    padding-top: 30%;
+    padding-left: 7%;
+    p{
+        line-height: 2;
+        text-align: center;
+    }
+    
+}
 .home-illustration{
     padding-left: 10%;
-    padding-top: 25%;
+    padding-top: 5%;
+    height: 90%;
+    width: 90%;
 }
 
 .content-1{
-    padding-left: 30%;
-    padding-top: 25%;
+    // padding-left: 24%;
+    padding-top: 10%;
+    p{
+        text-align: center;
+        line-height: 2;
+    }
    
 }
 
-.content-2{
-    padding-left: 18%;
-    padding-top: 1%;
-}
+// .content-2{
+//     padding-left: 12%;
+//     padding-top: 1%;
+// }
 
 .about-img{
     height: 80%;
@@ -34,5 +51,14 @@ p{
         line-height: 1.5;
         text-align: center;
         
+    }
+}
+
+.pricing{
+    h2{
+        color: #fff;
+        font: normal 300 22px/1 'Josefin Sans', sans-serif;
+        padding-top: 10%;
+        letter-spacing: 3%;
     }
 }
