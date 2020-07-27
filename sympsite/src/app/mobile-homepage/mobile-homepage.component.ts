@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MobileHomepageComponent implements OnInit {
 
-  public planArray = []
+  public planArray
   constructor() { 
     this.planArray = [ { 
       plan: 'BASIC', 
@@ -24,7 +24,9 @@ export class MobileHomepageComponent implements OnInit {
        description: 'Perfect for e-tailers and businesses that have large sites or online catalogues',
        cost: ' 1,40,000/-'
      }                        
-]
+    ]
+    console.log(this.planArray);
+    
   }
 
   ngOnInit() {

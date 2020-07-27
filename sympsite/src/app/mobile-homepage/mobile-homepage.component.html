@@ -1,28 +1,83 @@
 <div class="container-fluid">
-
-    <div class="row">
-        <div class="tag-line">
-            <p>Empowering businesses with a digital presence</p>
-        </div>
-        <img class="home-illustration" src="/assets/Home illustration MAIN.svg" alt="">
-        <div class="content-1">
-            <p>Let your story flow, we'll help make it your best reality.</p>   
-        </div>
+    <div class="home">
+            <div class="tag-line">
+                <p>Empowering businesses with a digital presence</p>
+            </div>
+            <img class="home-illustration" src="/assets/Home illustration MAIN.svg" alt="">
+            <div class="content-1">
+                <p>Let your story flow, we'll help make it your best reality.</p>   
+            </div>
     </div>
-
-    <div class="row">
-        <img class="about-img" src="/assets/About final.svg" alt="">
-        <div class="about-content">
-            <p>Every journey begins with a single step. We're a team comprising 
-                of a wide variety of mindsets, all working towards building a stronger ecosystem.
-            </p>
-        </div>
+    <div class="about">
+            <h2 class="about-header">ABOUT</h2>
+            <img class="about-img" src="/assets/About final.svg" alt="">
+            <div class="about-content">
+                <p>Every journey begins with a single step. We're a team comprising 
+                    of a wide variety of mindsets, all working towards building a stronger ecosystem.
+                </p>
+            </div>
     </div>
+    
 
     <div class="pricing">
-        <h2>PRICING</h2>
-        <la-icon icon="la-angle-double-right"></la-icon>
-        <br>
-        <br>
+        <div class="row">
+            <div class="col-8">
+                <h2 class="pricing-header">PRICING</h2>
+            </div>
+            <div class="right-arrow-col col-4">
+                <img class="right-arrow-img" src="/assets/right-arrow.svg" alt="">
+            </div>
+            <br>
+            <br>
+        </div>
+        <div>
+            <div class="grid">
+                <div class="card card__one text-center" *ngFor="let plan of planArray">
+                    <h2 class="card-text">{{plan.plan}}</h2>
+                    <hr>
+                    <p>{{plan.description}}</p>
+                    <p>Starting at</p>
+                    <p class="card-text"><i class="fa fa-inr"></i>{{plan.cost}}</p>
+                    <p>exclusive of all taxes</p>
+                    <button class="btn-details">DETAILS</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact">
+        <h2 class="contact-header-1">CONTACT</h2>
+        <p class="contact-header-2">The rudimentary process of buisness starts with greeting.</p>
+        <img class="contact-letter-image"src="/assets/Contact.svg" alt="">
+        <div class="contact-second-half row">
+            <form class="example-form">
+                <mat-form-field class="example-full-width" [floatLabel]="'never'">
+                  <mat-icon matSuffix>message</mat-icon>
+                  <input matInput placeholder="Send your message here">
+                </mat-form-field>
+            </form>
+            <img class="contact-hello-img" src="/assets/hello.svg" alt="">
+            <p class="contact-para-1">Let's join hands and begin.</p>
+            <div class="contact-options">
+                <div class="contact-option">
+                  <mat-icon matSuffix [inline]="true">phone</mat-icon>
+                  <span class="contact-option-text">
+                    Call
+                  </span>
+                </div>
+                <div class="contact-option">
+                  <mat-icon matSuffix [inline]="true">email</mat-icon>
+                  <span class="contact-option-text">
+                    Email
+                  </span>
+                </div>
+                <div class="contact-option">
+                  <mat-icon matSuffix [inline]="true">map</mat-icon>
+                  <span class="contact-option-text">
+                    Map
+                  </span>
+                </div>
+              </div>
+        </div>
     </div>
 </div>
