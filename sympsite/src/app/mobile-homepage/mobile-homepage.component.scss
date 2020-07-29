@@ -66,7 +66,6 @@
         color: #fff;
         font: normal 300 22px/1 'Josefin Sans', sans-serif;
         padding-top: 10%;
-        // padding-left: 55%;
         letter-spacing: 3%;
     }
     .right-arrow-col{
@@ -74,51 +73,45 @@
         padding-top: 3%;
     }
     
-    .grid {
-        overflow: hidden;
-        display: flex;
-        margin: 0 auto;
-        padding-top: 5%;
-      
-        .card {
+    .swiper{
+        padding-top:10%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        padding-left: 3%;
+        max-height: 340px;
+            .swiper-slide {
+                .card {
+                    border-radius: 10px;
+                    h2{
+                        padding-top: 10%;
+                        color: black;
+                        font : normal 300 18px/1 'Josefin Sans', sans-serif;
+                    }
+                    p{
+                        color: black;
+                        font : normal 300 18px/1 'Josefin Sans', sans-serif;
+                        text-align: center;
+                    }
         
-            flex: 1 0 auto;
-            // background: lighten($color-bg, 3%);
-            border-radius: 10px;
-            h2{
-                padding-top: 10%;
-                color: black;
-                font : normal 300 18px/1 'Josefin Sans', sans-serif;
-            }
-            p{
-                color: black;
-                font : normal 300 18px/1 'Josefin Sans', sans-serif;
-            }
+                    .btn-details{
+          
+                        background-color: rgba(0,0,0,.8);
+                        border: transparent;
+                        padding: 5px;
+                        margin:5px;
+                        color: #fff;
+                        font: normal 300 32px/1 'Josefin Sans', sans-serif;
+                        font-size: 18px;
+                        letter-spacing: 1px;
+                      }
+                  }
 
-            .btn-details{
-  
-                background-color: rgba(0,0,0,.8);
-                border: transparent;
-                padding: 5px;
-                margin:5px;
-                color: #fff;
-                font: normal 300 32px/1 'Josefin Sans', sans-serif;
-                font-size: 18px;
-                letter-spacing: 1px;
-              }
-          }
-        
-          .card__one {
-        
-            transition: transform .5s;
-            width: 200px;
-            
-            margin-right:10%;
-            margin-bottom: 10%;
-            
-          }
+                  .card__one {
+                    margin: 0;       
+                  }
+            }
+    }
     
-      }
 }
 
 .contact{

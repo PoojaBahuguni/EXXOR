@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd  } from '@angular/router';
 import { filter, every } from 'rxjs/operators';
 import { ApplicationStateService } from '../application-state.service';
@@ -9,11 +9,16 @@ import { ApplicationStateService } from '../application-state.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+
+  @Output() menuClicked : EventEmitter<boolean> = new EventEmitter();
   routeChanged : boolean;
   public isMobileResolution: boolean;
   routeData = null;
-  constructor(private router: Router, private route: ActivatedRoute,
-    private applicationStateService: ApplicationStateService) {
+
+  constructor(private router: Router, 
+              private route: ActivatedRoute,
+              private applicationStateService: ApplicationStateService) {
+
     this.router.events.pipe(
       filter(e => {
         return e instanceof NavigationEnd;
@@ -38,4 +43,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  menuClickedHandler(event){
+    this.menuClicked.emit(event)
+  }
 }

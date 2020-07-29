@@ -20,6 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { MobileHomepageComponent } from './mobile-homepage/mobile-homepage.component';
 import { MobileHeaderComponent } from './header/mobile-header/mobile-header.component';
 import { DesktopHeaderComponent } from './header/desktop-header/desktop-header.component';
+import { SwiperModule } from 'ngx-swiper-wrapper';
 
 
 @NgModule({
@@ -35,8 +36,6 @@ import { DesktopHeaderComponent } from './header/desktop-header/desktop-header.c
     MobileHomepageComponent,
     MobileHeaderComponent,
     DesktopHeaderComponent,
-    
-    
   ],
   imports: [
     BrowserModule,
@@ -47,6 +46,7 @@ import { DesktopHeaderComponent } from './header/desktop-header/desktop-header.c
     MatIconModule,
     MatTableModule,
     MatButtonModule,
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

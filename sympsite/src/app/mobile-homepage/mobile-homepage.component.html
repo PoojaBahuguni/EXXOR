@@ -8,7 +8,7 @@
                 <p>Let your story flow, we'll help make it your best reality.</p>   
             </div>
     </div>
-    <div class="about">
+    <div class="about" id="about">
             <h2 class="about-header">ABOUT</h2>
             <img class="about-img" src="/assets/About final.svg" alt="">
             <div class="about-content">
@@ -19,7 +19,7 @@
     </div>
     
 
-    <div class="pricing">
+    <div class="pricing" id="pricing">
         <div class="row">
             <div class="col-8">
                 <h2 class="pricing-header">PRICING</h2>
@@ -30,22 +30,25 @@
             <br>
             <br>
         </div>
-        <div>
-            <div class="grid">
-                <div class="card card__one text-center" *ngFor="let plan of planArray">
-                    <h2 class="card-text">{{plan.plan}}</h2>
-                    <hr>
-                    <p>{{plan.description}}</p>
-                    <p>Starting at</p>
-                    <p class="card-text"><i class="fa fa-inr"></i>{{plan.cost}}</p>
-                    <p>exclusive of all taxes</p>
-                    <button class="btn-details">DETAILS</button>
-                </div>
+        <div class="swiper">
+          <swiper [config]="config">
+            <div class="swiper-slide" *ngFor="let plan of planArray">
+              <div class="card card__one text-center" >
+                <h2 class="card-text">{{plan.plan}}</h2>
+                <hr>
+                <p>{{plan.description}}</p>
+                <p>Starting at</p>
+                <p class="card-text"><i class="fa fa-inr"></i>{{plan.cost}}</p>
+                <p>exclusive of all taxes</p>
+                <button class="btn-details">DETAILS</button>
+              </div>
             </div>
+          </swiper> 
         </div>
+          
     </div>
 
-    <div class="contact">
+    <div class="contact" id="contact">
         <h2 class="contact-header-1">CONTACT</h2>
         <p class="contact-header-2">The rudimentary process of buisness starts with greeting.</p>
         <img class="contact-letter-image"src="/assets/Contact.svg" alt="">

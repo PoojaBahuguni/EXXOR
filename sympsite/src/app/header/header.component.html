@@ -3,5 +3,5 @@
 </div>
 
 <ng-template #mobileContainer>
-  <app-mobile-header></app-mobile-header>
+  <app-mobile-header (menuClicked)="menuClickedHandler($event)"></app-mobile-header>
 </ng-template>

@@ -1,18 +1,7 @@
-<!-- <div class="container-fluid"> -->
-        <!-- <div class="loading-screen-wrapper" [hidden]="!loaded">
-            <div class="loading-screen-icon">
-                Loading...
-            </div>
-        </div> -->
-        <app-header [hidden]="loaded"></app-header>
-        <router-outlet [hidden]="loaded"></router-outlet>
-<!-- </div> -->
-
-
-<!-- <div class="bg">
-    <app-header></app-header>
-    <router-outlet #o="outlet"></router-outlet>
-</div>  -->
-
-
-<!--[@scrollAnimation]="getState(o)"-->
+<img [hidden]="!menuFlag" class="mobile-menu-close" (click)="menuCloseClicked()"src="/assets/close.svg" alt="">
+<button [hidden]="!menuFlag" class="menu-about-button" (click)="aboutClicked()">ABOUT</button>
+<button [hidden]="!menuFlag" class="menu-pricing-button" (click)="pricingClicked()">PRICING</button>
+<button [hidden]="!menuFlag" class="menu-contact-button" (click)="contactClicked()">CONTACT</button>
+<div [hidden]="!menuFlag" class="overlay"></div>
+<app-header (menuClicked)="menuClickedHandlerApp($event)"></app-header>
+<router-outlet></router-outlet>
