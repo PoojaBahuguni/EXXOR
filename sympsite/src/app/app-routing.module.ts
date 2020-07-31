@@ -6,10 +6,11 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { PricingComponent } from './pricing/pricing.component';
 import { MobileHomepageComponent } from './mobile-homepage/mobile-homepage.component';
 import { ApplicationStateService } from './application-state.service';
+import { MobilePricingComponent } from './mobile-pricing/mobile-pricing.component';
 
 const routes: Routes = [
     { path:'', component: HomepageComponent, data:{ state: 'home'} },
-    { path:'pricing', component: PricingComponent, data:{ state: 'pricing'} },
+    { path:'pricing', component: PricingComponent },
     { path:'about', component: AboutComponent , data:{ state: 'about'}},
     { path:'contact', component: ContactComponent, data:{state: 'contact'}},
     { path:'**', redirectTo: '', pathMatch: 'full'}
@@ -17,9 +18,7 @@ const routes: Routes = [
 
 const mobile_routes: Routes = [
     { path:'', component: MobileHomepageComponent, data:{ state: 'home'} },
-    { path:'pricing', component: PricingComponent, data:{ state: 'pricing'} },
-    { path:'about', component: AboutComponent , data:{ state: 'about'}},
-    { path:'contact', component: ContactComponent, data:{state: 'contact'}},
+    { path:'pricing/:plan', component: MobilePricingComponent },
     { path:'**', redirectTo: '', pathMatch: 'full'}
 ]
 // configures NgModule imports and exports

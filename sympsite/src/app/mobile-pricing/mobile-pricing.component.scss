@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300,400);
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+
+.plan-name{
+    h2{
+        color: #fff;
+        padding: 10%;
+        text-align: center;
+        font: normal 300 22px/1 'Josefin Sans', sans-serif;
+        letter-spacing: 3%;
+    }
+    
+}
+
+.plan-details{
+    p{
+        color: #fff;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 5%;
+        text-align: center;
+        font: normal 300 18px/1 'Josefin Sans', sans-serif;
+        letter-spacing: 3%;
+    }
+}

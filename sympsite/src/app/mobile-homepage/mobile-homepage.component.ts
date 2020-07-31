@@ -3,6 +3,7 @@ import { GetScrollPositionService } from '../get-scroll-position.service';
 import { ScrollPosition } from '../scroll-position.model';
 import { analyzeAndValidateNgModules } from '@angular/compiler';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-mobile-homepage',
   templateUrl: './mobile-homepage.component.html',
@@ -16,7 +17,8 @@ export class MobileHomepageComponent implements OnInit {
     contactY:0
   };
   a : any;
-  constructor(private getScrollPosService: GetScrollPositionService) { 
+  constructor(private getScrollPosService: GetScrollPositionService,
+              private router: Router) { 
     this.planArray = [ { 
       plan: 'BASIC', 
       description: 'Perfect for most businesses who want to look their best and convert leads',
@@ -57,4 +59,8 @@ export class MobileHomepageComponent implements OnInit {
     spaceBetween: 20,
     width: 440
   };
+
+  detailsClicked(plan: string){
+    this.router.navigate(["/pricing", plan]);
+  }
 }

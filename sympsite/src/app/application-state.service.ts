@@ -9,11 +9,11 @@ export class ApplicationStateService {
   constructor() {
     if (window.innerWidth < 768) {
       this.isMobileResolution = true;
-      console.log("Mobile");
+      
       
     } else {
       this.isMobileResolution = false;
-      console.log("Desktop");
+     
       
     }
    }

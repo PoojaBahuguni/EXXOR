@@ -52,34 +52,46 @@ export const treesDestroyAnimation =   trigger('treesDestroyAnimation', [
       
 export const pricingAnimation = trigger('pricingAnimation', [
 
-  transition('* <=> *', [
+  transition('void => full', [
     
-    query(':enter', style({ opacity: 0}), {optional: true}),
-        query(':leave', style({ opacity: 1}), {optional: true}),
+    query('.card', style({ opacity: 0}), {optional: true}),
         group([
-          query(':enter', stagger('300ms', [
+          query('.card', stagger('300ms', [
             animate('1s ease-in', keyframes([
               style({ opacity: 0, transform: 'translateY(-75px)', offset: 0}),
               style({ opacity: .5, transform: 'translateY(35px)', offset: 0.3}),
               style({ opacity: 1, transform: 'translateY(0px)', offset: 1})
             ]))
           ]),{ optional: true }),
-          query(':leave', stagger('300ms', [
-            animate('1s ease-in', keyframes([
-              style({ opacity: 1, transform: 'translateY(0px)', offset: 0}),
-              style({ opacity: 0, transform: 'translateY(-75px)', offset: 1})
-            ]))
-          ]),{ optional: true }),
         ])
     ]),
-    // transition('move => inview', [
-    //   style({opacity: 0, position:'absolute', top:'20%'}),
-    //     animate('1s ease-in', keyframes([
-    //       style({ opacity: 0, transform: 'translateX(20px)', offset: 0.5}),
-    //       style({ opacity: 1, transform: 'translateX(0px)', offset: 1})
-    //     ]))
-    //   ])
+    transition('full => empty', [
+      query('.card', style({ opacity: 1}), {optional: true}),
+      group([
+        query('.card', stagger('300ms', [
+        animate('1s ease-in', keyframes([
+          style({ opacity: 1, transform: 'translateY(0px)', offset: 0}),
+          style({ opacity: 0, transform: 'translateY(-75px)', offset: 1})
+          
+        ]))
+      ]),{ optional: true })])
+      
+    ]),
+    transition('empty => full', [
+    
+      query('.card', style({ opacity: 0}), {optional: true}),
+          group([
+            query('.card', stagger('300ms', [
+              animate('1s ease-in', keyframes([
+                style({ opacity: 0, transform: 'translateY(-75px)', offset: 0}),
+                style({ opacity: .5, transform: 'translateY(35px)', offset: 0.3}),
+                style({ opacity: 1, transform: 'translateY(0px)', offset: 1})
+              ]))
+            ]),{ optional: true })
+          ])
+      ]),
     ])
+  
 
 
 export const screenAnimation = trigger('screenAnimation', [

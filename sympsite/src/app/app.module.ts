@@ -21,6 +21,7 @@ import { MobileHomepageComponent } from './mobile-homepage/mobile-homepage.compo
 import { MobileHeaderComponent } from './header/mobile-header/mobile-header.component';
 import { DesktopHeaderComponent } from './header/desktop-header/desktop-header.component';
 import { SwiperModule } from 'ngx-swiper-wrapper';
+import { MobilePricingComponent } from './mobile-pricing/mobile-pricing.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
     MobileHomepageComponent,
     MobileHeaderComponent,
     DesktopHeaderComponent,
+    MobilePricingComponent,
   ],
   imports: [
     BrowserModule,

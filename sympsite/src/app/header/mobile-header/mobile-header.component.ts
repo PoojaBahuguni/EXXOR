@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mobile-header',
@@ -8,13 +9,14 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class MobileHeaderComponent implements OnInit {
   @Output() menuClicked: EventEmitter<boolean> = new EventEmitter();
   public menuFlag: boolean;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   menuSelected(){
     this.menuFlag = true;
+    this.router.navigateByUrl('');
     this.menuClicked.emit(this.menuFlag)
   }
 
