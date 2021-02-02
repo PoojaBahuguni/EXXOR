@@ -73,6 +73,12 @@
         font-size: 22px;
 
         .contact-option {
+            a{
+                text-decoration: none;
+                color:  rgb(0,0,0,0.8);
+                font : normal 300 18px/1 'Josefin Sans', sans-serif ;
+            }
+            
             flex: 1;
             display: flex;
             align-items: center;
@@ -82,6 +88,7 @@
                 color: rgb(0,0,0,0.8);
             }
             .contact-option-text {
+                
                 color: rgb(0,0,0,0.8);
                 font : normal 300 18px/1 'Josefin Sans', sans-serif ;
             } 
