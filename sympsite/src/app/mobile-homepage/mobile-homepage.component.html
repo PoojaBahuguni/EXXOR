@@ -53,10 +53,10 @@
         <p class="contact-header-2">The rudimentary process of buisness starts with greeting.</p>
         <img class="contact-letter-image"src="/assets/Contact.svg" alt="">
         <div class="contact-second-half row">
-            <form class="example-form">
+            <form class="example-form" [formGroup]="form" (ngSubmit)="onSubmit()">
                 <mat-form-field class="example-full-width" [floatLabel]="'never'">
                   <mat-icon matSuffix>message</mat-icon>
-                  <input matInput placeholder="Send your message here">
+                  <input formControlName="description" matInput placeholder="Send your message here">
                 </mat-form-field>
             </form>
             <img class="contact-hello-img" src="/assets/hello.svg" alt="">

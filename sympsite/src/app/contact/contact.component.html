@@ -9,10 +9,10 @@
           <p>The rudimentary process of business starts with greeting.</p>
         </div>
         <img class="hello-image" src="/assets/hello.svg" alt="hello-image">
-    <form class="example-form">
+    <form class="example-form" [formGroup]="form" (ngSubmit)="onSubmit()">
       <mat-form-field class="example-full-width" [floatLabel]="'never'">
         <mat-icon matSuffix>message</mat-icon>
-        <input matInput placeholder="Send your message here">
+        <input formControlName="description" matInput placeholder="Send your message here">
       </mat-form-field>
     </form>
     <div class="contact-content-2">

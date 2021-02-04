@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, PreloadAllModules } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AboutComponent } from './about/about.component';
@@ -11,8 +10,6 @@ import { ContactComponent } from './contact/contact.component';
 import { MatFormFieldModule } from '@angular/material';
 import { MatInputModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
-import { FormControl } from '@angular/forms';
-import { Validators } from '@angular/forms';
 import { MatTableModule } from '@angular/material'
 import { MatButtonModule } from '@angular/material/button';
 import { MouseWheelDirective } from './mousewheel.directive';
@@ -22,7 +19,8 @@ import { MobileHeaderComponent } from './header/mobile-header/mobile-header.comp
 import { DesktopHeaderComponent } from './header/desktop-header/desktop-header.component';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { MobilePricingComponent } from './mobile-pricing/mobile-pricing.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   entryComponents: [MobileHomepageComponent],
@@ -48,7 +46,9 @@ import { MobilePricingComponent } from './mobile-pricing/mobile-pricing.componen
     MatIconModule,
     MatTableModule,
     MatButtonModule,
-    SwiperModule
+    SwiperModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
