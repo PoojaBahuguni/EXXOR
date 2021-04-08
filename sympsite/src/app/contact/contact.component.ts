@@ -38,7 +38,7 @@ export class ContactComponent implements OnInit {
     this.dataset.description = this.form.value.description
     console.log(this.dataset.description);
     
-    this.https.post<Details>('http://localhost:8080/testapp/getdetails', this.dataset).subscribe(
+    this.https.post<Details>('https://162.241.74.209:8081/getdetails', this.dataset).subscribe(
       res => {
         this.dataset = res;
         console.log(this.dataset);
