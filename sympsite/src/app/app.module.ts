@@ -21,6 +21,7 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
 import { MobilePricingComponent } from './mobile-pricing/mobile-pricing.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from "@angular/forms";
+import { LocationStrategy, Location, PathLocationStrategy } from '@angular/common';
 
 @NgModule({
   entryComponents: [MobileHomepageComponent],
@@ -50,7 +51,10 @@ import { ReactiveFormsModule } from "@angular/forms";
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    Location, {provide: LocationStrategy, useClass: PathLocationStrategy}
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
